@@ -1,25 +1,86 @@
-import logo from './logo.svg';
-import './App.css';
+import styled from "styled-components";
+import Spline from "@splinetool/react-spline";
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <Wrapper>
+      <Spline
+        className="spline"
+        scene="https://prod.spline.design/5cKdf3mRxXOyGGBg/scene.splinecode"
+      />
+
+      <Content>
+        <h1>Santiago Germán Avalos</h1>
+        <ul>
+          <a href="https://github.com/sanavalos" target="_blank">
+            <li>GitHub</li>
+          </a>
+          <a href="https://www.linkedin.com/in/santiagoavalos/" target="_blank">
+            <li>LinkedIn</li>
+          </a>
+          <a
+            href="https://drive.google.com/file/d/1h7ifMwD4c6FHr1t1xgqXrqIURLxCMIpG/view"
+            target="_blank"
+          >
+            <li>Curriculum Vitae</li>
+          </a>
+        </ul>
+      </Content>
+    </Wrapper>
   );
 }
 
+const Wrapper = styled.div`
+  background-color: #000;
+  height: 100vh;
+  width: 100vw;
+  .spline {
+    position: absolute;
+    height: 100vh;
+    width: 100vw;
+    margin: 0;
+    top: 0;
+    right: 0;
+  }
+`;
+const Content = styled.div`
+  position: absolute;
+  top: 10%;
+  color: white;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  ul {
+    list-style: none;
+    display: flex;
+    flex-direction: row;
+    a {
+      text-decoration: none;
+      color: white;
+    }
+    li {
+      margin: 0 1rem;
+      &:hover {
+        cursor: pointer;
+        &::after {
+          content: "";
+          display: block;
+          width: 100%;
+          height: 2px;
+          background-color: white;
+          animation: slide 0.5s ease-in-out;
+          @keyframes slide {
+            0% {
+              transform: translateX(-15%);
+            }
+            100% {
+              transform: translateX(0);
+            }
+          }
+        }
+      }
+    }
+  }
+`;
 export default App;
