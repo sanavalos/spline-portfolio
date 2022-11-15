@@ -10,17 +10,25 @@ function App() {
       />
 
       <Content>
-        <h1>Santiago Germán Avalos</h1>
         <ul>
-          <a href="https://github.com/sanavalos" target="_blank">
+          <a
+            href="https://github.com/sanavalos"
+            target="_blank"
+            rel="noreferrer"
+          >
             <li>GitHub</li>
           </a>
-          <a href="https://www.linkedin.com/in/santiagoavalos/" target="_blank">
+          <a
+            href="https://www.linkedin.com/in/santiagoavalos/"
+            target="_blank"
+            rel="noreferrer"
+          >
             <li>LinkedIn</li>
           </a>
           <a
             href="https://drive.google.com/file/d/1h7ifMwD4c6FHr1t1xgqXrqIURLxCMIpG/view"
             target="_blank"
+            rel="noreferrer"
           >
             <li>Curriculum Vitae</li>
           </a>
@@ -45,10 +53,10 @@ const Wrapper = styled.div`
 `;
 const Content = styled.div`
   position: absolute;
-  top: 10%;
+  top: 5%;
   color: white;
   display: flex;
-  justify-content: space-between;
+  justify-content: flex-end;
   align-items: center;
   width: 100%;
   ul {
