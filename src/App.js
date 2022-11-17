@@ -26,7 +26,7 @@ function App() {
             <li>LinkedIn</li>
           </a>
           <a
-            href="https://drive.google.com/file/d/1h7ifMwD4c6FHr1t1xgqXrqIURLxCMIpG/view"
+            href="https://drive.google.com/file/d/1z4WLrEl-zlCVS9xtLvcbnYt1SXA-nfZQ/view?usp=sharing"
             target="_blank"
             rel="noreferrer"
           >
