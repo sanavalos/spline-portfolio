@@ -1,49 +1,57 @@
 import styled from "styled-components";
 import Spline from "@splinetool/react-spline";
 import curriculum from "./Santiago Avalos - CV.pdf";
+import Modal from "./Modal.jsx";
+import bg from "./digitalblend.jpg";
 
 function App() {
   return (
-    <Wrapper>
-      <Spline
-        className="spline"
-        scene="https://prod.spline.design/5cKdf3mRxXOyGGBg/scene.splinecode"
-      />
+    <>
+      <Modal />
+      <Wrapper>
+        <Spline
+          className="spline"
+          scene="https://prod.spline.design/5cKdf3mRxXOyGGBg/scene.splinecode"
+        />
 
-      <Content>
-        <ul>
-          <a
-            href="https://github.com/sanavalos"
-            target="_blank"
-            rel="noreferrer"
-          >
-            <li>GitHub</li>
-          </a>
-          <a
-            href="https://www.linkedin.com/in/santiagoavalos/"
-            target="_blank"
-            rel="noreferrer"
-          >
-            <li>LinkedIn</li>
-          </a>
-          <a
-            href="https://drive.google.com/file/d/1z4WLrEl-zlCVS9xtLvcbnYt1SXA-nfZQ/view?usp=sharing"
-            target="_blank"
-            rel="noreferrer"
-          >
-            <a href={curriculum} download="Santiago Avalos-CV.pdf">
-              <li className="download">Curriculum Vitae</li>
-              <span>Descargar PDF</span>
+        <Content>
+          <ul>
+            <a
+              href="https://github.com/sanavalos"
+              target="_blank"
+              rel="noreferrer"
+            >
+              <li>GitHub</li>
             </a>
-          </a>
-        </ul>
-      </Content>
-    </Wrapper>
+            <a
+              href="https://www.linkedin.com/in/santiagoavalos/"
+              target="_blank"
+              rel="noreferrer"
+            >
+              <li>LinkedIn</li>
+            </a>
+            <a
+              href="https://drive.google.com/file/d/1z4WLrEl-zlCVS9xtLvcbnYt1SXA-nfZQ/view?usp=sharing"
+              target="_blank"
+              rel="noreferrer"
+            >
+              <a href={curriculum} download="Santiago Avalos-CV.pdf">
+                <li className="download">Curriculum Vitae</li>
+                <span>Descargar PDF</span>
+              </a>
+            </a>
+          </ul>
+        </Content>
+      </Wrapper>
+    </>
   );
 }
 
 const Wrapper = styled.div`
-  background-color: #000;
+  background-image: url(${bg});
+  background-repeat: no-repeat;
+  background-size: cover;
+
   height: 100vh;
   width: 100vw;
   .spline {
@@ -75,12 +83,13 @@ const Content = styled.div`
       span {
         color: gray;
         font-size: 0.9rem;
-        margin: 18%;
+        margin: 25%;
       }
     }
     li {
       margin: 0 1rem;
-
+      font-size: 1.1vw;
+      font-weight: 600;
       &:hover {
         cursor: pointer;
         &::after {
