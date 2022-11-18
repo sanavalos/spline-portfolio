@@ -1,5 +1,6 @@
 import styled from "styled-components";
 import Spline from "@splinetool/react-spline";
+import curriculum from "./Santiago Avalos - CV.pdf";
 
 function App() {
   return (
@@ -30,7 +31,10 @@ function App() {
             target="_blank"
             rel="noreferrer"
           >
-            <li>Curriculum Vitae</li>
+            <a href={curriculum} download="Santiago Avalos-CV.pdf">
+              <li className="download">Curriculum Vitae</li>
+              <span>Descargar PDF</span>
+            </a>
           </a>
         </ul>
       </Content>
@@ -63,12 +67,20 @@ const Content = styled.div`
     list-style: none;
     display: flex;
     flex-direction: row;
+    .download {
+    }
     a {
       text-decoration: none;
       color: white;
+      span {
+        color: gray;
+        font-size: 0.9rem;
+        margin: 18%;
+      }
     }
     li {
       margin: 0 1rem;
+
       &:hover {
         cursor: pointer;
         &::after {
