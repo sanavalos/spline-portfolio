@@ -82,7 +82,7 @@ const Content = styled.div`
       color: white;
       span {
         color: gray;
-        font-size: 0.9rem;
+        font-size: 0.7vw;
         margin: 25%;
       }
     }

@@ -1,5 +1,36 @@
 import React, { useState } from "react";
 import styled from "styled-components";
+
+function Modal() {
+  const [showModal, setShowModal] = useState(true);
+
+  return (
+    <ModalStyle modalOn={showModal}>
+      <div className="all">
+        <div className="instructions">
+          <h3>SCROLL</h3>
+          <p>
+            El usar la rueda del mouse te va a permitir tener una vision mas
+            amplia
+          </p>
+        </div>
+        <div className="instructions">
+          <h3>CLICK</h3>
+          <p>
+            El hacer click en diferentes elementos te llevara a sitios web en
+            otra pestaña
+          </p>
+        </div>
+        <div className="instructions">
+          <h3>DISFRUTA</h3>
+          <p>Quiero mostrarme al mundo IT y que vivas una nueva experiencia</p>
+        </div>
+      </div>
+      <span onClick={() => setShowModal(false)}>CONTINUAR</span>
+    </ModalStyle>
+  );
+}
+
 const ModalStyle = styled.div`
   span {
     border: 1px solid #fff;
@@ -58,35 +89,5 @@ const ModalStyle = styled.div`
   color: white;
   font-family: "Barlow Semi Condensed", sans-serif;
 `;
-
-function Modal() {
-  const [showModal, setShowModal] = useState(true);
-
-  return (
-    <ModalStyle modalOn={showModal}>
-      <div className="all">
-        <div className="instructions">
-          <h3>SCROLL</h3>
-          <p>
-            El usar la rueda del mouse te va a permitir tener una vision mas
-            amplia
-          </p>
-        </div>
-        <div className="instructions">
-          <h3>CLICK</h3>
-          <p>
-            El hacer click en diferentes elementos te llevara a sitios web en
-            otra pestaña
-          </p>
-        </div>
-        <div className="instructions">
-          <h3>DISFRUTA</h3>
-          <p>Quiero mostrarme al mundo IT y que vivas una nueva experiencia</p>
-        </div>
-      </div>
-      <span onClick={() => setShowModal(false)}>CONTINUAR</span>
-    </ModalStyle>
-  );
-}
 
 export default Modal;
